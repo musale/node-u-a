@@ -1,46 +1,18 @@
 {
   "name": "node-ussd-airflow",
-  "version": "1.0.0",
-  "description": "Make USSD menus using yaml files and your session storage",
+  "version": "0.0.1",
+  "description": "Easily create USSD screens using yaml files.",
   "main": "dist/index.js",
-  "repository": "git@github.com:musale/node-u-a.git",
+  "repository": "git@github.com:musale/node-ussd-airflow",
   "author": "Martin Musale <martinmshale@gmail.com>",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "node dist/index.js",
-    "test": "NODE_ENV=test PORT=8904 jest --forceExit",
-    "nodemon": "nodemon --watch dist dist/index.js",
-    "precommit": "lint-staged",
-    "prettier": "prettier --single-quote --write \"src/**/*.ts\"",
-    "dev": "tsc -w & nodemon"
-  },
-  "jest": {
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest"
-    },
-    "testRegex": "(/tests/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": ["ts", "tsx", "js"]
-  },
-  "lint-staged": {
-    "*.ts": ["prettier --single-qoute --write", "git add"]
-  },
-  "keywords": [],
-  "devDependencies": {
-    "@types/jest": "^22.1.1",
-    "@types/joi": "^13.0.5",
-    "@types/node": "^9.4.0",
-    "husky": "^0.14.3",
-    "jest": "^22.1.4",
-    "lint-staged": "^6.1.0",
-    "nodemon": "^1.14.11",
-    "prettier": "^1.10.2",
-    "supertest": "^3.0.0",
-    "ts-jest": "^22.0.2",
-    "typescript": "^2.7.1"
+    "dev": "tsc -w"
   },
   "dependencies": {
-    "eelog": "^1.2.2",
-    "joi": "^13.1.2"
+    "@types/node": "^9.4.7",
+    "js-yaml": "^3.11.0",
+    "typescript": "^2.7.2"
   }
 }
