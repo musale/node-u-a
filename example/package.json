@@ -1,0 +1,16 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "Example showing usage of node-ussd-airflow",
+  "main": "index.js",
+  "author": "Martin Musale <martinmshale@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "koa": "^2.5.0",
+    "koa-router": "^7.4.0"
+  }
+}
