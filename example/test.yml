@@ -1,4 +1,4 @@
-initial_screen: enter_name
+# initial_screen: enter_name
 
 enter_name:
   type: input_screen
