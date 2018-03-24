@@ -1,2 +1,3 @@
-# node-u-a
-Node U A
+# Node USSD Airflow
+
+> Easily create USSD screens using yaml files.
