@@ -13,7 +13,7 @@ const menuScreens = new USSD(filePath);
 app.use(BodyParser());
 
 router.post('/ussd', async (ctx, next) => {
-  menuScreens.run(ctx.request.body, (err, response) => {
+  await menuScreens.run(ctx.request.body, (err, response) => {
     if (err) console.error(err);
     else ctx.body = response;
     next();
