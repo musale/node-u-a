@@ -15,7 +15,6 @@ class USSD {
       await validateInitialScreen(this.yamlContent);
       return callback(null, 'Welcome');
     } catch (error) {
-      console.error();
       return callback(new Error(error), null);
     }
   }
