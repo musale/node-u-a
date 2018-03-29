@@ -9,11 +9,16 @@ class USSD {
   }
 
   async run(body, callback) {
+    const { text } = body;
+    this.ussdPath = text;
     try {
       const yamlContent = await readYamlFile(this.filePath);
       this.yamlContent = yamlContent;
-      await validateInitialScreen(this.yamlContent);
-      return callback(null, 'Welcome');
+      if (this.ussdPath === '') {
+        await validateInitialScreen(this.yamlContent);
+        return callback(null, 'Welcome');
+      }
+      return callback(null, this.ussdPath);
     } catch (error) {
       return callback(new Error(error), null);
     }
